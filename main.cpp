@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cassert>
-
+#include "Vector.h"
 
 int main() {
 
@@ -15,6 +15,7 @@ int main() {
         vec2.push_back(i);
 
         // Verificando cada dato
+        //std::cout << "Compare -> vect1[" << i << "]: " << vec1[i] << "   vect2[" << i <<"]: " << vec2.get_item(i) << std::endl;
         assert(vec1[i] == vec2.get_item(i));
     }
 
@@ -37,18 +38,21 @@ int main() {
 
     // Agregando datos
     auto j = 0;
-    for (int i = 40; i < 20; ++i) {
+    for (int i = 0; i < 2; ++i) {
+        //std::cout << "valor j:" << j << std::endl;
         vec1.insert(vec1.begin()+j, i);
         vec2.insert(j++, i);
     }
 
     assert(vec1.size() == vec2.size());
 
+    /*
     // Verificando cada dato
     for (int i = 0; i < vec1.size(); ++i) {
         assert(vec1[i] == vec2.get_item(i));
     }
 
     std::cout << "Funciono Correctamente\n";
+    */
     return 0;
 }
