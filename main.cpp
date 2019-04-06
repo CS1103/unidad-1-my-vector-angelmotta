@@ -46,13 +46,13 @@ int main() {
 
     assert(vec1.size() == vec2.size());
 
-    /*
+
     // Verificando cada dato
     for (int i = 0; i < vec1.size(); ++i) {
         assert(vec1[i] == vec2.get_item(i));
     }
 
     std::cout << "Funciono Correctamente\n";
-    */
+
     return 0;
 }

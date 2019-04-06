@@ -47,17 +47,23 @@ namespace UTEC {
     int vector::get_item(int i) {return _arr[i];}
 
     void vector::insert(int pos, const int &value) {
+        bool found = false;
         _size += 1;
-        //std::cout << "Inserta en Posicion: " << pos << " el valor: " << value << std::endl;
+        std::cout << "Inserta en Posicion: " << pos << " el valor: " << value << std::endl;
 
         int* temp_arr_ins = new int[_size];
         for(int i=0;i<_size;i++){
             if(i == pos){
                 temp_arr_ins[i] = value;
             }
+            else if(i < pos){
+                temp_arr_ins[i] = _arr[i];
+            }
             else{
                 temp_arr_ins[i] = _arr[i-1];
             }
         }
+        delete [] _arr;
+        _arr = temp_arr_ins;
     }
 }
