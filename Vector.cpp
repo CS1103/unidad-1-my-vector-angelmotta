@@ -49,7 +49,7 @@ namespace UTEC {
     void vector::insert(int pos, const int &value) {
         bool found = false;
         _size += 1;
-        std::cout << "Inserta en Posicion: " << pos << " el valor: " << value << std::endl;
+        //std::cout << "Inserta en Posicion: " << pos << " el valor: " << value << std::endl;
 
         int* temp_arr_ins = new int[_size];
         for(int i=0;i<_size;i++){
